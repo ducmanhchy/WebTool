@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+@{Layout = null;}
+@model WebSampleTool.Models.DangNhapModel
+<html lang="en" class="h-100" id="login-page1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title></title>
+    <script src="~/Content/Scripts/jquery-3.3.1.js"></script>
+</head>
+<body>
+    <h4 class="text-center mt-4 line-on-side "><span>Đăng nhập</span></h4>
+    @using (Html.BeginForm("DoLogin", "DangNhap", new { backurl = ViewContext.HttpContext.Request.QueryString["backurl"] }, FormMethod.Post, new { @id = "loginform", @class = "mt-5 mb-5" }))
+    {
+        @Html.TextBoxFor(x => x.TaiKhoan_DangNhap, new { @class = "form-control", @placeholder = "Tên đăng nhập" })
+        @Html.ValidationMessageFor(x => x.TaiKhoan_DangNhap)
+        @Html.PasswordFor(x => x.TaiKhoan_MatKhau, new { @class = "form-control", @placeholder = "Mật khẩu" })
+        @Html.ValidationMessageFor(x => x.TaiKhoan_MatKhau)
+        <input class="" type="checkbox" id="basic_checkbox_1">
+        <label class="form-check-label ml-3" for="basic_checkbox_1">Ghi nhớ</label>
+        <button type="submit" class="btn btn-blue-crm">Đăng nhập</button>
+    }
+</body>
+</html>
+<style>
+    .field-validation-valid {
+        width: 100%;
+        color: #ff4848;
+        font-weight: normal;
+    }
+</style>
+<script>
+    $("#TaiKhoan_DangNhap").focus();
+    $('#loginform').submit(function (e) {
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: $('#loginform').attr("action"),
+            data: $('#loginform').serialize(),
+            success: function (data) {
+                if (data.Sucess)
+                    location.href = data.Url;
+                else
+                    DisplayErrors(data.Errors);
+            },
+            error: function (data) {
+                alert("Xảy ra lỗi hệ thống. Vui lòng thử lại sau.")
+            },
+        });
+    });
+
+    function DisplayErrors(errors) {
+        $(".field-validation-valid").html("");
+        for (var i = 0; i < errors.length; i++) {
+            $("span[data-valmsg-for='" + errors[i].Key + "']").text(errors[i].Value[0]);
+        }
+    }
+</script>
