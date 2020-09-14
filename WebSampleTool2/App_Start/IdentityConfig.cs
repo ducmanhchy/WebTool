@@ -111,17 +111,17 @@ namespace WebSampleTool2
             manager.UserValidator = new CustomUserValidator<ApplicationUser>(manager)
             {
                 AllowOnlyAlphanumericUserNames = false,
-                RequireUniqueEmail = false
+                RequireUniqueEmail = true
             };
 
             // Cấu hình logic xác thực cho passwords
-            manager.PasswordValidator = new PasswordValidator
+            manager.PasswordValidator = new CustomPasswordValidator
             {
                 RequiredLength = 3,
-                RequireNonLetterOrDigit = false,
-                RequireDigit = false,
-                RequireLowercase = false,
-                RequireUppercase = false,
+                RequireNonLetterOrDigit = true,
+                RequireDigit = true,
+                RequireLowercase = true,
+                RequireUppercase = true,
             };
 
             // Cấu hình mặc định khóa người dùng
