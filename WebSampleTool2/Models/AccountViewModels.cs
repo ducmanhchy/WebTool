@@ -85,6 +85,8 @@ namespace WebSampleTool2.Models
 
         [Display(Name = "Tài khoản")]
         [Required(ErrorMessage = "Vui lòng nhập tên tài khoản")]
+        public string UserName { get; set; }
+
         public string AccountName { get; set; }
     }
 

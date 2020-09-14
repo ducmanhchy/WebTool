@@ -110,7 +110,8 @@ namespace WebSampleTool2
             // Cấu hình logic xác thực cho tên người dùng
             manager.UserValidator = new CustomUserValidator<ApplicationUser>(manager)
             {
-                EndEmail = "gmail.com"
+                AllowOnlyAlphanumericUserNames = false,
+                RequireUniqueEmail = false
             };
 
             // Cấu hình logic xác thực cho passwords

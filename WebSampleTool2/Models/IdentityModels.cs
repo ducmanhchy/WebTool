@@ -17,7 +17,6 @@ namespace WebSampleTool2.Models
             // Add custom user claims here
             return userIdentity;
         }
-        public string AccountName { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
