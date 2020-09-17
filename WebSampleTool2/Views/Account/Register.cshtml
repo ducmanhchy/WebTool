@@ -2,50 +2,69 @@
 @{
     ViewBag.Title = "Tạo tài khoản";
 }
+<!DOCTYPE html>
+<html lang="vi">
 
-<h2>@ViewBag.Title.</h2>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Coderthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- App css -->
+    <link href="~/Content/Css/bootstrap3.3.7.css" rel="stylesheet" />
+    <link href="~/Content/Css/Site.css" rel="stylesheet" />
+</head>
 
-@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-{
-    @Html.AntiForgeryToken()
-    <h4>Tạo tài khoản mới.</h4>
-    <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group">
-        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+<body class="authentication-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <h1 class="text-center">@ViewBag.Title</h1>
+                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Email)
+                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "ex: abc@xyz.com" })
+                        @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.UserName)
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Nhập tài khoản đăng nhập" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Nhập mật khẩu" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.ConfirmPassword)
+                        @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control", @placeholder = "Nhập xác nhận mật khẩu" })
+                        @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <div class="row">
+                            <label for="remember" class="col-md-12">
+                                <input id="remember" type="checkbox" checked=""> Tôi đồng ý với các <strong><a href="#">Chính sách và điều khoản</a></strong>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <div class="col-12">
+                            <button class="btn btn-lg btn-dark" type="submit">Xác nhận</button>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <div class="col-sm-12 text-center">
+                            <p class="text-muted">Tôi đã có tài khoản? @Html.ActionLink("Đăng nhập", "login")</p>
+                        </div>
+                    </div>
+                }
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Xác nhận" />
-        </div>
-    </div>
-}
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+</body>
+</html>

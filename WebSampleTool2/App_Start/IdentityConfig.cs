@@ -118,10 +118,10 @@ namespace WebSampleTool2
             manager.PasswordValidator = new CustomPasswordValidator
             {
                 RequiredLength = 3,
-                RequireNonLetterOrDigit = true,
-                RequireDigit = true,
-                RequireLowercase = true,
-                RequireUppercase = true,
+                RequireNonLetterOrDigit = false,
+                RequireDigit = false,
+                RequireLowercase = false,
+                RequireUppercase = false,
             };
 
             // Cấu hình mặc định khóa người dùng

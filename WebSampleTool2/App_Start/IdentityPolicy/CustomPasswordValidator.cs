@@ -19,7 +19,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy
                 {
                     errors.Add(string.Format(CultureInfo.CurrentCulture, CustomResources.PasswordTooShort, RequiredLength));
                 });
-            if (RequireNonLetterOrDigit && !Regex.IsMatch(password, @".*[0-9]+.*|.*[a-z]+.*|.*[A-Z]+.*"))
+            if (RequireNonLetterOrDigit && !Regex.IsMatch(password, @".*[0-9a-zA-Z]+.*"))
                 await Task.Run(() =>
                 {
                     errors.Add(string.Format(CultureInfo.CurrentCulture, CustomResources.PasswordRequireNonLetterOrDigit));

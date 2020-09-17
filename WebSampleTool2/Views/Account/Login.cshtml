@@ -4,58 +4,59 @@
     ViewBag.Title = "Đăng nhập";
 }
 
-<h2>@ViewBag.Title.</h2>
-<div class="row">
-    <div class="col-md-8">
-        <section id="loginForm">
-            @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
-            {
-                @Html.AntiForgeryToken()
-                <hr />
-                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(m => m.AccountName, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.TextBoxFor(m => m.AccountName, new { @class = "form-control" })
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Coderthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- App css -->
+    <link href="~/Content/Css/bootstrap3.3.7.css" rel="stylesheet" />
+    <link href="~/Content/Css/Site.css" rel="stylesheet" />
+</head>
+<body class="authentication-page">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 col-xl-5">
+                <h1 class="text-center">@ViewBag.Title</h1>
+                @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.AccountName)
+                        @Html.TextBoxFor(m => m.AccountName, new { @class = "form-control", @placeholder = "Sử dụng tài khoản hoặc email" })
                         @Html.ValidationMessageFor(m => m.AccountName, "", new { @class = "text-danger" })
                     </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-                    <div class="col-md-10">
-                        @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Password)
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Nhập mật khẩu" })
                         @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <div class="checkbox">
-                            @Html.CheckBoxFor(m => m.RememberMe)
-                            @Html.LabelFor(m => m.RememberMe)
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-md-6">
+                                @Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)
+                            </div>
+                            @Html.ActionLink("Quên mật khẩu?", "Login", null, new { @class = "text-muted text-right col-md-6" })
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Đăng nhập" class="btn btn-default" />
+                    <div class="form-group row text-center">
+                        <div class="col-12">
+                            <button class="btn btn-lg btn-dark" type="submit">@ViewBag.Title</button>
+                        </div>
                     </div>
-                </div>
-                <p>
-                    @Html.ActionLink("Tạo tài khoản mới", "Register")
-                </p>
-                <p>
-                    @Html.ActionLink("Quên mật khẩu?", "ForgotPassword")
-                </p>
-            }
-        </section>
+                    <div class="form-group row">
+                        <div class="col-sm-12 text-center">
+                            <p class="text-muted">Bạn chưa có tài khoản? @Html.ActionLink("Tạo mới", "Register")</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <section id="socialLoginForm">
-            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
-        </section>
-    </div>
-</div>
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+</body>
+</html>

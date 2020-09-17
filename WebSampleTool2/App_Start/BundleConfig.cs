@@ -22,7 +22,7 @@ namespace WebSampleTool2
                       "~/Content/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/Css/bootstrap.css",
+                      "~/Content/Css/bootstrap3.3.7.css",
                       "~/Content/Css/site.css"));
         }
     }

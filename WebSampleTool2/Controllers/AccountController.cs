@@ -54,7 +54,7 @@ namespace WebSampleTool2.Controllers
         public ActionResult Login(string returnUrl)
         {
             ViewBag.ReturnUrl = returnUrl;
-            return View();
+            return PartialView();
         }
 
         // POST: /Account/Login
@@ -64,9 +64,10 @@ namespace WebSampleTool2.Controllers
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
-                return View(model);
+                return PartialView(model);
 
             // Hãy thay đổi shouldLockout: true để kích hoạt khóa tài khoản
+            //bool checkEmail = await UserManager.IsEmailConfirmedAsync(UserManager.get);
             var result = await SignInManager.PasswordSignInAsync(model.AccountName, model.Password, model.RememberMe, shouldLockout: true);
             switch (result)
             {
@@ -79,7 +80,7 @@ namespace WebSampleTool2.Controllers
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Tài khoản hoặc mật khẩu không đúng.");
-                    return View(model);
+                    return PartialView(model);
             }
         }
 
@@ -128,7 +129,7 @@ namespace WebSampleTool2.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            return PartialView();
         }
 
         // POST: /Account/Register
@@ -153,7 +154,7 @@ namespace WebSampleTool2.Controllers
                 AddErrors(result);
             }
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return PartialView(model);
         }
 
         // GET: /Account/ConfirmEmail
