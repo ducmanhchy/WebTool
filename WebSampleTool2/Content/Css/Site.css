@@ -4,6 +4,10 @@
     background-color: #edf0f0;
 }
 
+.body-content {
+    margin-top: 50px;
+}
+
 .justify-content-center {
     -webkit-box-pack: center !important;
     -ms-flex-pack: center !important;

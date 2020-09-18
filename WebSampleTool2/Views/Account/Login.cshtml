@@ -26,9 +26,9 @@
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                     <div class="form-group">
-                        @Html.LabelFor(m => m.AccountName)
-                        @Html.TextBoxFor(m => m.AccountName, new { @class = "form-control", @placeholder = "Sử dụng tài khoản hoặc email" })
-                        @Html.ValidationMessageFor(m => m.AccountName, "", new { @class = "text-danger" })
+                        @Html.LabelFor(m => m.UserName)
+                        @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = "Sử dụng tài khoản hoặc email" })
+                        @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(m => m.Password)
@@ -41,7 +41,7 @@
                                 @Html.CheckBoxFor(m => m.RememberMe)
                                 @Html.LabelFor(m => m.RememberMe)
                             </div>
-                            @Html.ActionLink("Quên mật khẩu?", "Login", null, new { @class = "text-muted text-right col-md-6" })
+                            @Html.ActionLink("Quên mật khẩu?", "ForgotPassword", null, new { @class = "text-muted text-right col-md-6" })
                         </div>
                     </div>
                     <div class="form-group row text-center">

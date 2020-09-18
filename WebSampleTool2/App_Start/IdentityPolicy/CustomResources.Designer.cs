@@ -61,7 +61,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Có một lỗi đã xảy ra trong quá trình thực hiện..
+        ///   Có một lỗi đã xảy ra trong quá trình thực hiện..
         /// </summary>
         internal static string DefaultError {
             get {
@@ -70,7 +70,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email &apos;{0}&apos; đã được đăng kí..
+        ///   Email &apos;{0}&apos; đã được đăng kí..
         /// </summary>
         internal static string DuplicateEmail {
             get {
@@ -79,7 +79,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tài khoản {0} đã được đăng kí..
+        ///   Tài khoản {0} đã được đăng kí..
         /// </summary>
         internal static string DuplicateName {
             get {
@@ -88,7 +88,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Người dùng có thông tin đăng nhập bên ngoài đã tồn tại..
+        ///   Người dùng có thông tin đăng nhập bên ngoài đã tồn tại..
         /// </summary>
         internal static string ExternalLoginExists {
             get {
@@ -97,7 +97,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Email &apos;{0}&apos; không đúng..
+        ///   Email &apos;{0}&apos; không đúng..
         /// </summary>
         internal static string InvalidEmail {
             get {
@@ -106,7 +106,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Token không đúng..
+        ///   Token không đúng..
         /// </summary>
         internal static string InvalidToken {
             get {
@@ -115,7 +115,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Tài khoản {0} không đúng, chỉ có thể chứa kí tự hoặc số..
+        ///   Tài khoản {0} không đúng, chỉ có thể chứa kí tự hoặc số..
         /// </summary>
         internal static string InvalidUserName {
             get {
@@ -124,7 +124,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Khóa tài khoản không được bật cho người dùng..
+        ///   Khóa tài khoản không được bật cho người dùng..
         /// </summary>
         internal static string LockoutNotEnabled {
             get {
@@ -133,7 +133,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có IUserTokenProvider được đăng kí..
+        ///   Không có IUserTokenProvider được đăng kí..
         /// </summary>
         internal static string NoTokenProvider {
             get {
@@ -142,7 +142,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Không có IUserTwoFactorProvider cho &apos;{0}&apos; được đăng kí..
+        ///   Không có IUserTwoFactorProvider cho &apos;{0}&apos; được đăng kí..
         /// </summary>
         internal static string NoTwoFactorProvider {
             get {
@@ -151,7 +151,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mật khẩu không khớp..
+        ///   Mật khẩu không khớp..
         /// </summary>
         internal static string PasswordMismatch {
             get {
@@ -160,7 +160,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mật khẩu phải có ít nhất một kí tự số (&apos;0&apos;-&apos;9&apos;)..
+        ///   Mật khẩu phải có ít nhất một kí tự số (&apos;0&apos;-&apos;9&apos;)..
         /// </summary>
         internal static string PasswordRequireDigit {
             get {
@@ -169,7 +169,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mật khẩu phải có ít nhất một kí tự thường (&apos;a&apos;-&apos;z&apos;)..
+        ///   Mật khẩu phải có ít nhất một kí tự thường (&apos;a&apos;-&apos;z&apos;)..
         /// </summary>
         internal static string PasswordRequireLower {
             get {
@@ -178,7 +178,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mật khẩu phải có ít nhất một chữ hoặc kí tự số..
+        ///   Mật khẩu phải có ít nhất một chữ hoặc kí tự số..
         /// </summary>
         internal static string PasswordRequireNonLetterOrDigit {
             get {
@@ -187,7 +187,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mật khẩu phải có ít nhất một kí tự hoa (&apos;A&apos;-&apos;Z&apos;)..
+        ///   Mật khẩu phải có ít nhất một kí tự hoa (&apos;A&apos;-&apos;Z&apos;)..
         /// </summary>
         internal static string PasswordRequireUpper {
             get {
@@ -196,7 +196,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Mật khẩu phải có ít nhât {0} kí tự..
+        ///   Mật khẩu phải có ít nhât {0} kí tự..
         /// </summary>
         internal static string PasswordTooShort {
             get {
@@ -205,7 +205,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to {0} không được null hoặc empty..
+        ///   {0} không được null hoặc empty..
         /// </summary>
         internal static string PropertyTooShort {
             get {
@@ -214,7 +214,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Role {0} không tồn tại..
+        ///   Role {0} không tồn tại..
         /// </summary>
         internal static string RoleNotFound {
             get {
@@ -223,7 +223,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IQueryableRoleStore&lt;TRole&gt;.
+        ///   Store không được implement IQueryableRoleStore&lt;TRole&gt;.
         /// </summary>
         internal static string StoreNotIQueryableRoleStore {
             get {
@@ -232,7 +232,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store dkhông được implement IQueryableUserStore&lt;TUser&gt;.
+        ///   Store dkhông được implement IQueryableUserStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIQueryableUserStore {
             get {
@@ -241,7 +241,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserClaimStore&lt;TUser&gt;.
+        ///   Store không được implement IUserClaimStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserClaimStore {
             get {
@@ -250,7 +250,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserConfirmationStore&lt;TUser&gt;.
+        ///   Store không được implement IUserConfirmationStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserConfirmationStore {
             get {
@@ -259,7 +259,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserEmailStore&lt;TUser&gt;.
+        ///   Store không được implement IUserEmailStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserEmailStore {
             get {
@@ -268,7 +268,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserLockoutStore&lt;TUser&gt;.
+        ///   Store không được implement IUserLockoutStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserLockoutStore {
             get {
@@ -277,7 +277,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserLoginStore&lt;TUser&gt;.
+        ///   Store không được implement IUserLoginStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserLoginStore {
             get {
@@ -286,7 +286,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserPasswordStore&lt;TUser&gt;.
+        ///   Store không được implement IUserPasswordStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserPasswordStore {
             get {
@@ -295,7 +295,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserPhoneNumberStore&lt;TUser&gt;.
+        ///   Store không được implement IUserPhoneNumberStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserPhoneNumberStore {
             get {
@@ -304,7 +304,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserRoleStore&lt;TUser&gt;.
+        ///   Store không được implement IUserRoleStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserRoleStore {
             get {
@@ -313,7 +313,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserSecurityStampStore&lt;TUser&gt;.
+        ///   Store không được implement IUserSecurityStampStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserSecurityStampStore {
             get {
@@ -322,7 +322,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Store không được implement IUserTwoFactorStore&lt;TUser&gt;.
+        ///   Store không được implement IUserTwoFactorStore&lt;TUser&gt;.
         /// </summary>
         internal static string StoreNotIUserTwoFactorStore {
             get {
@@ -331,7 +331,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User đã thiết lập password.
+        ///   User đã thiết lập password.
         /// </summary>
         internal static string UserAlreadyHasPassword {
             get {
@@ -340,7 +340,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User đã có quyền.
+        ///   User đã có quyền.
         /// </summary>
         internal static string UserAlreadyInRole {
             get {
@@ -349,7 +349,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UserId không tìm thấy.
+        ///   UserId không tìm thấy.
         /// </summary>
         internal static string UserIdNotFound {
             get {
@@ -358,7 +358,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User {0} không tồn tại.
+        ///   User {0} không tồn tại.
         /// </summary>
         internal static string UserNameNotFound {
             get {
@@ -367,7 +367,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to User không có quyền.
+        ///   User không có quyền.
         /// </summary>
         internal static string UserNotInRole {
             get {

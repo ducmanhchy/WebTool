@@ -62,7 +62,7 @@ namespace WebSampleTool2.Models
 
         [Required(ErrorMessage = "Vui lòng nhập tài khoản")]
         [Display(Name = "Tài khoản")]
-        public string AccountName { get; set; }
+        public string UserName { get; set; }
     }
 
     public class RegisterViewModel
@@ -92,13 +92,8 @@ namespace WebSampleTool2.Models
 
     public class ResetPasswordViewModel
     {
-        [Required(ErrorMessage = "Vui lòng nhập Email")]
-        [EmailAddress(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
-
         [Required(ErrorMessage = "Vui lòng nhập mật khẩu")]
-        [StringLength(100, ErrorMessage = "{0} phải có ít nhất {2} kí tự.", MinimumLength = 6)]
+        [StringLength(100, ErrorMessage = "{0} phải có ít nhất {2} kí tự.", MinimumLength = 3)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
@@ -107,6 +102,8 @@ namespace WebSampleTool2.Models
         [Display(Name = "Xác nhận mật khẩu")]
         [Compare("Password", ErrorMessage = "Xác nhận mật khẩu không đúng.")]
         public string ConfirmPassword { get; set; }
+
+        public string UserId { get; set; }
 
         public string Code { get; set; }
     }
