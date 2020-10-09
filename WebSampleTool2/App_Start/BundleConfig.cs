@@ -19,10 +19,10 @@ namespace WebSampleTool2
                         "~/Content/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Content/Scripts/bootstrap.js"));
+                      "~/Content/Scripts/bootstrap-3.3.7.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/Css/bootstrap3.3.7.css",
+                      "~/Content/Css/bootstrap-3.3.7.css",
                       "~/Content/Css/site.css"));
         }
     }

@@ -69,7 +69,7 @@ namespace WebSampleTool2.Controllers
 
             // Hãy thay đổi shouldLockout: true để kích hoạt khóa tài khoản
             var user = await UserManager.FindByEmailAsync(model.UserName);
-            if (user != null || await UserManager.IsEmailConfirmedAsync(user.Id))
+            if (user != null && await UserManager.IsEmailConfirmedAsync(user.Id))
                 model.UserName = user.UserName;
             var result = await SignInManager.PasswordSignInAsync(model.UserName, model.Password, model.RememberMe, shouldLockout: true);
             switch (result)
@@ -193,6 +193,37 @@ namespace WebSampleTool2.Controllers
         public ActionResult ResetPasswordConfirmation()
         {
             return View();
+        }
+
+        // GET: /Account/SetPassword
+        public ActionResult SetPassword()
+        {
+            return View();
+        }
+
+        // GET: /Account/ChangePassword
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        // POST: /Account/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                return RedirectToAction("Index", new { Message = "ChangePasswordSuccess" });
+            }
+            AddErrors(result);
+            return View(model);
         }
 
         #region EXTERNAL LOGIN
