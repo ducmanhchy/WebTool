@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using WebSampleTool2.App_Start.IdentityPolicy;
 
 namespace WebSampleTool2.Models
 {
@@ -8,7 +9,7 @@ namespace WebSampleTool2.Models
     {
         [Required(ErrorMessage = "Vui lòng nhập Email")]
         [Display(Name = "Email")]
-        [EmailAddress(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
+        [CustomEmailValidator(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
         public string Email { get; set; }
     }
 
@@ -46,7 +47,7 @@ namespace WebSampleTool2.Models
     {
         [Required(ErrorMessage = "Vui lòng nhập Email")]
         [Display(Name = "Email")]
-        [EmailAddress(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
+        [CustomEmailValidator(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
         public string Email { get; set; }
     }
 
@@ -68,7 +69,7 @@ namespace WebSampleTool2.Models
     public class RegisterViewModel
     {
         [Required(ErrorMessage = "Vui lòng nhập Email")]
-        [EmailAddress(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
+        [CustomEmailValidator(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
@@ -111,7 +112,7 @@ namespace WebSampleTool2.Models
     public class ForgotPasswordViewModel
     {
         [Required(ErrorMessage = "Vui lòng nhập Email")]
-        [EmailAddress(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
+        [CustomEmailValidator(ErrorMessage = "Email không đúng định dạng vd: abc@xyz.com")]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }

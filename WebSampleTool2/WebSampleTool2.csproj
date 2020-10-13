@@ -166,6 +166,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\IdentityPolicy\CustomEmailValidatorAttribute.cs" />
     <Compile Include="App_Start\IdentityPolicy\CustomPasswordValidator.cs" />
     <Compile Include="App_Start\IdentityPolicy\CustomResources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -177,7 +178,6 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -189,13 +189,13 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Css\bootstrap3.3.7.css" />
+    <Content Include="Content\Css\bootstrap-3.3.7.css" />
+    <Content Include="Content\Scripts\bootstrap-3.3.7.js" />
     <Content Include="Content\Scripts\bootstrap-dialog.js" />
     <Content Include="favicon.ico" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Css\Site.css" />
-    <Content Include="Content\Scripts\bootstrap.js" />
     <Content Include="Content\Scripts\jquery-3.3.1.js" />
     <None Include="Content\Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Content\Scripts\jquery.validate.js" />
@@ -230,6 +230,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Account\ChangePassword.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

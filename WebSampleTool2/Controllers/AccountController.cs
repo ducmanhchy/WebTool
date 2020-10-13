@@ -151,10 +151,7 @@ namespace WebSampleTool2.Controllers
                     await UserManager.SendEmailAsync(user.Id, "Reset Password", "Reset mật khẩu của bạn bằng cách bấm vào <a href=\"" + callbackUrl + "\">Đây</a>");
                     return RedirectToAction("ForgotPasswordConfirmation", "Account");
                 }
-
-                var errors = new List<string>();
-                errors.Add(string.Format(CultureInfo.CurrentCulture, "Email '{0}' không tồn tại", model.Email));
-                AddErrors(IdentityResult.Failed(errors.ToArray()));
+                ModelState.AddModelError("Email", string.Format(CultureInfo.CurrentCulture, "Email '{0}' không tồn tại", model.Email));
             }
             return View(model);
         }
@@ -222,6 +219,7 @@ namespace WebSampleTool2.Controllers
                     await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                 return RedirectToAction("Index", new { Message = "ChangePasswordSuccess" });
             }
+            ModelState.AddModelError("OldPassword", "Sai mật khẩu");
             AddErrors(result);
             return View(model);
         }
