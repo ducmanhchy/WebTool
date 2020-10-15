@@ -189,7 +189,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Css\bootstrap-3.3.7.css" />
+    <Content Include="Content\Css\bootstrap-3.4.1.css" />
     <Content Include="Content\Scripts\bootstrap-3.3.7.js" />
     <Content Include="Content\Scripts\bootstrap-dialog.js" />
     <Content Include="favicon.ico" />

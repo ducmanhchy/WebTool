@@ -12,7 +12,7 @@ namespace WebSampleTool2.App_Start.IdentityPolicy
     [AttributeUsage(AttributeTargets.Field | AttributeTargets.Property, AllowMultiple = false, Inherited = true)]
     public class CustomEmailValidatorAttribute : ValidationAttribute
     {
-        private const string RegexPattern = @"^[0-9a-zA-Z]+@[a-z]+\.[a-z]+$";
+        private const string RegexPattern = @"^[0-9a-zA-Z]+@[a-z]+(\.[a-z]+)+$";
 
         public CustomEmailValidatorAttribute()
         {
