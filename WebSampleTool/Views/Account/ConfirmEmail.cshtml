@@ -1,0 +1,33 @@
+﻿@{
+    ViewBag.Title = "Xác nhận email";
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="Coderthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- App css -->
+    <link href="~/Content/Css/App.css" rel="stylesheet" />
+    <link href="~/Content/Css/Site.css" rel="stylesheet" />
+</head>
+<body class="authentication-page">
+    @Html.Partial("_HeaderOnlyLogo")
+    <div class="container body-content">
+        <div class="row justify-content-center">
+            <div class="col-xs-10 col-sm-8 col-md-6 col-lg-6 col-xl-5">
+                <h1 class="text-center">@ViewBag.Title</h1>
+                <div>
+                    <p>
+                        Cảm ơn bạn đã xác nhận email. Hãy @Html.ActionLink("bấm vào đây để đăng nhập hệ thống", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

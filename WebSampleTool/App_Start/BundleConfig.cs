@@ -4,7 +4,6 @@ namespace WebSampleTool
 {
     public class BundleConfig
     {
-        // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -19,10 +18,10 @@ namespace WebSampleTool
                         "~/Content/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Content/Scripts/bootstrap.js"));
+                      "~/Content/Scripts/App.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/Css/bootstrap.css",
+                      "~/Content/Css/App.css",
                       "~/Content/Css/site.css"));
         }
     }

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.1231
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSampleTool2", "WebSampleTool2\WebSampleTool2.csproj", "{BCBF60DD-BB2F-46F7-9932-429F545E720C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSampleTool", "WebSampleTool\WebSampleTool.csproj", "{BCBF60DD-BB2F-46F7-9932-429F545E720C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSampleTool3", "WebSampleTool3\WebSampleTool3.csproj", "{CE207438-B735-460D-8DC4-CE46600904D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BCBF60DD-BB2F-46F7-9932-429F545E720C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BCBF60DD-BB2F-46F7-9932-429F545E720C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BCBF60DD-BB2F-46F7-9932-429F545E720C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE207438-B735-460D-8DC4-CE46600904D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE207438-B735-460D-8DC4-CE46600904D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE207438-B735-460D-8DC4-CE46600904D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE207438-B735-460D-8DC4-CE46600904D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
